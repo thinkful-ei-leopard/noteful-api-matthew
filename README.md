@@ -10,7 +10,9 @@ Start nodemon for the application `npm run dev`
 
 Run the tests `npm test`
 
-Run the DB migration scripts `npm run migrate`
+Migrate the database at `DB_URL`, with `npm run migrate`
+
+Migrate the tests (at `TEST_DB_URL`), with `npm run migrate:test`
 
 Run the test DB migration scripts `npm run migrate:test`
 
