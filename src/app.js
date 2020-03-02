@@ -8,6 +8,7 @@ const { NODE_ENV } = require('./config');
 const app = express();
 
 const foldersRouter = require('./folders/folders-router');
+const notesRouter = require('./notes/notes-router');
 
 const morganOption = (NODE_ENV === 'production')
   ? 'tiny'
@@ -20,6 +21,7 @@ app.use(cors());
 app.use(helmet());
 
 app.use('/api/folders', foldersRouter);
+app.use('/api/notes', notesRouter);
 
 app.use((error, req, res, next) => {
   let response;
